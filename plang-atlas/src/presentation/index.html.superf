@@ -24,6 +24,8 @@
           <a href="/lang/<%= lang.id %>.html">
             <%= lang.name %>
           </a>
+
+          (first released in <%= lang.year %>)
         </li>
       <% end %>
     </ul>
