@@ -169,9 +169,18 @@ module DesugaringExercises
   #   get added before the things on the right. (a + b + c) means ((a + b) + c), NOT (a + (b + c)).
   #
   def desugared_operators(recipients, event, message)
-    self.mail(message,
+    self.mail(
+      message,
       {:to => recipients.map() {|x| x.email()},
-      :subject => "You’re invited to ".+(event.title().to_s().+(" on ".+(event.date().to_s())))})
+      :subject =>
+          (
+            (
+              (
+                "You’re invited to "
+              ).+(event.title().to_s())
+            ).+(" on ")
+          ).+(event.date().to_s())
+      })
   end
 
   # Compare that to the version at the top.
