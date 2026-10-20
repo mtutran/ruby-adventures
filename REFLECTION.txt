@@ -1,0 +1,1 @@
+They are very similar. The only notable difference is that in your solution, desugared_implicit_self already implements desugared_implicit_parens while they are separate in mine. Also, your year property is string while mine is number.
